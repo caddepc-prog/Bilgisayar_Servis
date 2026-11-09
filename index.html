@@ -1,0 +1,725 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cadde PC bilgisayar, laptop ve Mac teknik servis, bakım ve onarım hizmetleri.">
+<title>Cadde PC | Bilgisayar Teknik Servis</title>
+
+<style>
+:root {
+    --blue: #2864e8;
+    --dark: #101d35;
+    --light: #f4f7fc;
+    --text: #17243a;
+    --muted: #68768c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1180px;
+    margin: auto;
+}
+
+/* HEADER */
+
+header {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 15px #0000000b;
+}
+
+nav {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--dark);
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    color: var(--blue);
+}
+
+.btn {
+    display: inline-block;
+    background: var(--blue);
+    color: white;
+    padding: 13px 23px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #174bbd;
+    transform: translateY(-2px);
+}
+
+/* HERO */
+
+.hero {
+    background: linear-gradient(120deg, #f0f5ff, #ffffff);
+    padding: 100px 0;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.15;
+    color: var(--dark);
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: var(--blue);
+}
+
+.hero p {
+    color: var(--muted);
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    background: linear-gradient(135deg, #2864e8, #48c5e8);
+    min-height: 340px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 800;
+    padding: 30px;
+    box-shadow: 0 25px 50px #2864e833;
+}
+
+/* SERVICES */
+
+.services {
+    padding: 90px 0;
+    background: var(--light);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    color: var(--dark);
+}
+
+.section-title p {
+    color: var(--muted);
+    margin-top: 10px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #e7edf5;
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px #00000012;
+}
+
+.service-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: var(--dark);
+}
+
+.service-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* ABOUT */
+
+.about {
+    padding: 100px 0;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-box {
+    background: linear-gradient(135deg, #e8f0ff, #e5faff);
+    border-radius: 20px;
+    padding: 70px 30px;
+    text-align: center;
+}
+
+.about-box h2 {
+    font-size: 65px;
+    color: var(--blue);
+}
+
+.about h2 {
+    color: var(--dark);
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+/* CTA */
+
+.cta {
+    background: var(--dark);
+    color: white;
+    padding: 60px 0;
+}
+
+.cta-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.cta h2 {
+    font-size: 30px;
+}
+
+.cta p {
+    color: #bdcce4;
+}
+
+/* CONTACT */
+
+.contact {
+    padding: 90px 0;
+    background: var(--light);
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact h2 {
+    font-size: 38px;
+    color: var(--dark);
+    margin-bottom: 20px;
+}
+
+.contact p {
+    color: var(--muted);
+}
+
+.contact-info {
+    margin-top: 25px;
+}
+
+.contact-info div {
+    margin-bottom: 20px;
+}
+
+.contact-info strong {
+    display: block;
+    color: var(--dark);
+}
+
+.contact-card {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px #0000000a;
+}
+
+.contact-card h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.contact-card .btn {
+    margin-top: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #0b172b;
+    color: white;
+    padding: 35px 0;
+    text-align: center;
+}
+
+footer p {
+    color: #aab8ce;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+/* WHATSAPP SABİT BUTON */
+
+.whatsapp-float {
+    position: fixed;
+    width: 62px;
+    height: 62px;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background: #1ebe5d;
+    transform: scale(1.12);
+}
+
+.whatsapp-float svg {
+    width: 35px;
+    height: 35px;
+    fill: white;
+}
+
+/* MOBİL UYUMLULUK */
+
+@media(max-width: 850px) {
+
+    .hero-content,
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu {
+        gap: 12px;
+        font-size: 12px;
+    }
+
+    .cta-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media(max-width: 550px) {
+
+    nav {
+        height: auto;
+        min-height: 75px;
+        flex-wrap: wrap;
+        padding: 15px 0;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 15px;
+        gap: 8px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .hero-image {
+        min-height: 230px;
+        font-size: 27px;
+    }
+
+    .section-title h2,
+    .about h2,
+    .contact h2 {
+        font-size: 30px;
+    }
+
+    .whatsapp-float {
+        width: 56px;
+        height: 56px;
+        bottom: 18px;
+        right: 18px;
+    }
+
+    .whatsapp-float svg {
+        width: 31px;
+        height: 31px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+<div class="container">
+<nav>
+
+<a href="#anasayfa" class="logo">
+CADDE <span>PC</span>
+</a>
+
+<div class="menu">
+<a href="#anasayfa">Ana Sayfa</a>
+<a href="#hizmetler">Hizmetler</a>
+<a href="#hakkimizda">Hakkımızda</a>
+<a href="#iletisim">İletişim</a>
+</div>
+
+</nav>
+</div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="anasayfa">
+<div class="container">
+<div class="hero-content">
+
+<div>
+<p style="color:#2864e8;font-weight:bold">
+PROFESYONEL TEKNİK SERVİS
+</p>
+
+<h1>
+Teknolojiniz<br>
+<span>Emin Ellerde.</span>
+</h1>
+
+<p>
+Bilgisayar, laptop ve Mac cihazlarınız için
+profesyonel teknik servis, bakım ve onarım çözümleri.
+</p>
+
+<a href="tel:+905365069353" class="btn">
+☎ 0536 506 93 53
+</a>
+</div>
+
+<div class="hero-image">
+CADDE PC<br>
+TEKNİK SERVİS
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- HİZMETLER -->
+
+<section class="services" id="hizmetler">
+<div class="container">
+
+<div class="section-title">
+<h2>Hizmetlerimiz</h2>
+<p>Bilgisayar teknolojilerinde profesyonel çözümler.</p>
+</div>
+
+<div class="service-grid">
+
+<div class="service-card">
+<div class="service-icon">💻</div>
+<h3>Bilgisayar Teknik Servis</h3>
+<p>Masaüstü ve dizüstü bilgisayar arıza tespiti, bakım ve onarım.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">🍎</div>
+<h3>Mac Teknik Servis</h3>
+<p>MacBook ve Apple bilgisayarlar için teknik destek ve bakım.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">⚙️</div>
+<h3>Donanım ve Yazılım</h3>
+<p>Windows kurulumu, format, sürücü ve performans sorunlarının çözümü.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">🌐</div>
+<h3>Network Kurulumu</h3>
+<p>İnternet, modem, kablosuz ağ ve işletme network çözümleri.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">💾</div>
+<h3>Veri Kurtarma</h3>
+<p>Hard disk, SSD ve harici disklerde veri kurtarma desteği.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">🏢</div>
+<h3>Kurumsal Teknik Destek</h3>
+<p>İşletmeler için bilgisayar ve bilişim altyapısı desteği.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- HAKKIMIZDA -->
+
+<section class="about" id="hakkimizda">
+<div class="container">
+
+<div class="about-content">
+
+<div class="about-box">
+<h2>18+</h2>
+<p>YILLIK TECRÜBE</p>
+</div>
+
+<div>
+<h2>Teknolojide Güvenilir Çözüm Ortağınız</h2>
+
+<p>
+Cadde PC olarak bilgisayar, donanım, yazılım ve
+internet teknolojilerinde profesyonel teknik destek
+hizmetleri sunuyoruz.
+</p>
+
+<p>
+Ev kullanıcıları ve işletmeler için hızlı,
+güvenilir ve kaliteli çözümler üretmeyi hedefliyoruz.
+</p>
+
+<a href="#iletisim" class="btn">
+Bizimle İletişime Geçin
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- İLETİŞİM ÇAĞRISI -->
+
+<section class="cta">
+<div class="container">
+<div class="cta-content">
+
+<div>
+<h2>Bilgisayarınız Desteğe mi İhtiyaç Duyuyor?</h2>
+<p>Size yardımcı olmak için buradayız.</p>
+</div>
+
+<a href="tel:+905365069353" class="btn">
+Hemen Arayın
+</a>
+
+</div>
+</div>
+</section>
+
+<!-- İLETİŞİM -->
+
+<section class="contact" id="iletisim">
+<div class="container">
+
+<div class="contact-content">
+
+<div>
+<h2>İletişim</h2>
+<p>
+Teknik servis ve hizmetlerimiz hakkında
+bilgi almak için bizimle iletişime geçebilirsiniz.
+</p>
+
+<div class="contact-info">
+
+<div>
+<strong>Telefon</strong>
+<a href="tel:+902164169209">0216 416 92 09</a>
+</div>
+
+<div>
+<strong>Mobil Telefon</strong>
+<a href="tel:+905365069353">0536 506 93 53</a>
+</div>
+
+<div>
+<strong>E-posta</strong>
+<a href="mailto:info@caddepc.com">
+info@caddepc.com
+</a>
+</div>
+
+<div>
+<strong>Adres</strong>
+Suadiye Mahallesi, Tonozlu Sk. No:20,
+34740 Kadıköy / İstanbul
+</div>
+
+<div>
+<strong>Çalışma Saatleri</strong>
+08:30 - 19:30
+</div>
+
+</div>
+</div>
+
+<div class="contact-card">
+<h3>Cadde PC Teknik Servis</h3>
+
+<p>
+Bilgisayarınızla ilgili yaşadığınız sorunları
+bize telefon veya e-posta yoluyla iletebilirsiniz.
+</p>
+
+<a href="tel:+905365069353" class="btn">
+☎ Hemen Arayın
+</a>
+
+<br><br>
+
+<a href="mailto:info@caddepc.com" class="btn">
+✉ E-posta Gönder
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+<div class="container">
+
+<h2>CADDE PC</h2>
+
+<p>
+Bilgisayar Teknik Servis ve Bilişim Çözümleri
+</p>
+
+<p>
+© <span id="year"></span> Cadde PC.
+Tüm hakları saklıdır.
+</p>
+
+</div>
+</footer>
+
+<!-- SABİT WHATSAPP İKONU -->
+
+<a href="https://wa.me/905365069353"
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="WhatsApp üzerinden iletişime geç">
+
+<svg viewBox="0 0 32 32">
+<path d="M16.01 3C8.84 3 3 8.83 3 16c0 2.3.61 4.55 1.77 6.52L3 29l6.65-1.74A12.94 12.94 0 0 0 16 29c7.17 0 13-5.83 13-13S23.18 3 16.01 3zm0 23.8c-1.99 0-3.94-.54-5.63-1.57l-.4-.24-3.95 1.03 1.05-3.85-.26-.42A10.75 10.75 0 0 1 5.2 16c0-5.96 4.85-10.8 10.81-10.8 2.89 0 5.6 1.13 7.64 3.17A10.73 10.73 0 0 1 26.8 16c0 5.96-4.84 10.8-10.79 10.8zm5.93-8.09c-.32-.16-1.9-.94-2.19-1.04-.29-.11-.51-.16-.72.16-.22.32-.83 1.04-1.02 1.25-.19.21-.38.24-.7.08-.32-.16-1.35-.5-2.58-1.59-.95-.84-1.59-1.88-1.78-2.2-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.56.16-.19.21-.32.32-.54.11-.21.06-.4-.03-.56-.08-.16-.72-1.74-.99-2.38-.26-.62-.53-.54-.72-.55h-.62c-.22 0-.57.08-.86.4-.3.32-1.13 1.1-1.13 2.68s1.16 3.11 1.32 3.32c.16.21 2.28 3.48 5.53 4.88.77.33 1.37.53 1.84.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.39.19-1.53-.08-.14-.29-.22-.61-.38z"/>
+</svg>
+
+</a>
+
+<script>
+document.getElementById("year").textContent =
+new Date().getFullYear();
+</script>
+
+</body>
+</html>
