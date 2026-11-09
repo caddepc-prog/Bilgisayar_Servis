@@ -5,15 +5,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Cadde PC bilgisayar, laptop ve Mac teknik servis, bakım ve onarım hizmetleri.">
-<title>Cadde PC | Bilgisayar Teknik Servis</title>
+<title>Cadde PC | Profesyonel Bilgisayar Teknik Servis</title>
 
 <style>
 :root {
     --blue: #2864e8;
+    --blue-dark: #174bbd;
     --dark: #101d35;
     --light: #f4f7fc;
     --text: #17243a;
     --muted: #68768c;
+    --green: #25d366;
 }
 
 * {
@@ -46,24 +48,25 @@ a {
 /* HEADER */
 
 header {
-    background: white;
+    background: rgba(255,255,255,.97);
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 15px #0000000b;
+    box-shadow: 0 3px 20px #0000000b;
 }
 
 nav {
-    height: 80px;
+    min-height: 82px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 900;
     color: var(--dark);
+    letter-spacing: -1px;
 }
 
 .logo span {
@@ -72,45 +75,61 @@ nav {
 
 .menu {
     display: flex;
-    gap: 30px;
+    gap: 32px;
+    align-items: center;
 }
 
 .menu a {
     font-weight: 600;
     font-size: 14px;
+    transition: .3s;
 }
 
 .menu a:hover {
     color: var(--blue);
 }
 
+/* GENEL BUTON */
+
 .btn {
-    display: inline-block;
-    background: var(--blue);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg,#2864e8,#174bbd);
     color: white;
-    padding: 13px 23px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: .3s;
+    padding: 15px 27px;
+    border-radius: 50px;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(40,100,232,.2);
+    transition: all .3s ease;
 }
 
 .btn:hover {
-    background: #174bbd;
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(40,100,232,.3);
 }
 
 /* HERO */
 
 .hero {
-    background: linear-gradient(120deg, #f0f5ff, #ffffff);
-    padding: 100px 0;
+    background: linear-gradient(120deg,#edf3ff,#ffffff);
+    padding: 105px 0;
+    overflow: hidden;
 }
 
 .hero-content {
     display: grid;
     grid-template-columns: 1.1fr .9fr;
-    gap: 50px;
+    gap: 55px;
     align-items: center;
+}
+
+.hero-label {
+    color: var(--blue);
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 13px;
 }
 
 .hero h1 {
@@ -118,6 +137,7 @@ nav {
     line-height: 1.15;
     color: var(--dark);
     margin: 20px 0;
+    letter-spacing: -2px;
 }
 
 .hero h1 span {
@@ -131,64 +151,85 @@ nav {
 }
 
 .hero-image {
-    background: linear-gradient(135deg, #2864e8, #48c5e8);
-    min-height: 340px;
-    border-radius: 25px;
+    min-height: 370px;
+    border-radius: 30px;
+    background: linear-gradient(135deg,#174bbd,#2864e8,#48c5e8);
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     color: white;
     text-align: center;
-    font-size: 35px;
-    font-weight: 800;
+    font-size: 40px;
+    font-weight: 900;
     padding: 30px;
-    box-shadow: 0 25px 50px #2864e833;
+    box-shadow: 0 25px 60px #2864e833;
+    position: relative;
 }
 
-/* SERVICES */
+.hero-image small {
+    font-size: 15px;
+    letter-spacing: 4px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* HİZMETLER */
 
 .services {
-    padding: 90px 0;
+    padding: 100px 0;
     background: var(--light);
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 55px;
 }
 
 .section-title h2 {
-    font-size: 38px;
+    font-size: 40px;
     color: var(--dark);
+    letter-spacing: -1px;
 }
 
 .section-title p {
     color: var(--muted);
     margin-top: 10px;
+    font-size: 16px;
 }
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 25px;
 }
 
 .service-card {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    border: 1px solid #e7edf5;
-    transition: .3s;
+    background: #fff;
+    padding: 32px;
+    border-radius: 20px;
+    border: 1px solid #e8edf5;
+    transition: all .35s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .service-card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 15px 35px #00000012;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(40,100,232,.13);
+    border-color: var(--blue);
 }
 
 .service-icon {
-    font-size: 35px;
-    margin-bottom: 15px;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg,#e8f0ff,#dceaff);
+    border-radius: 18px;
+    font-size: 32px;
+    margin-bottom: 22px;
 }
 
 .service-card h3 {
@@ -200,31 +241,60 @@ nav {
 .service-card p {
     color: var(--muted);
     font-size: 14px;
+    min-height: 68px;
 }
 
-/* ABOUT */
+.service-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+    padding: 11px 20px;
+    border-radius: 50px;
+    color: #fff;
+    background: linear-gradient(135deg,#2864e8,#174bbd);
+    font-size: 13px;
+    font-weight: 700;
+    transition: all .3s ease;
+    box-shadow: 0 5px 15px rgba(40,100,232,.2);
+}
+
+.service-btn:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 22px rgba(40,100,232,.3);
+}
+
+/* HAKKIMIZDA */
 
 .about {
-    padding: 100px 0;
+    padding: 105px 0;
 }
 
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 65px;
     align-items: center;
 }
 
 .about-box {
-    background: linear-gradient(135deg, #e8f0ff, #e5faff);
-    border-radius: 20px;
-    padding: 70px 30px;
+    background: linear-gradient(135deg,#e8f0ff,#e5faff);
+    border-radius: 25px;
+    padding: 80px 30px;
     text-align: center;
 }
 
 .about-box h2 {
-    font-size: 65px;
+    font-size: 75px;
     color: var(--blue);
+    line-height: 1;
+}
+
+.about-box p {
+    font-weight: 800;
+    color: var(--dark);
+    letter-spacing: 3px;
+    margin-top: 15px;
 }
 
 .about h2 {
@@ -236,15 +306,15 @@ nav {
 
 .about p {
     color: var(--muted);
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 /* CTA */
 
 .cta {
-    background: var(--dark);
+    background: linear-gradient(120deg,#101d35,#1c3765);
     color: white;
-    padding: 60px 0;
+    padding: 70px 0;
 }
 
 .cta-content {
@@ -256,27 +326,28 @@ nav {
 
 .cta h2 {
     font-size: 30px;
+    margin-bottom: 8px;
 }
 
 .cta p {
     color: #bdcce4;
 }
 
-/* CONTACT */
+/* İLETİŞİM */
 
 .contact {
-    padding: 90px 0;
+    padding: 100px 0;
     background: var(--light);
 }
 
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 55px;
 }
 
 .contact h2 {
-    font-size: 38px;
+    font-size: 40px;
     color: var(--dark);
     margin-bottom: 20px;
 }
@@ -286,32 +357,39 @@ nav {
 }
 
 .contact-info {
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 .contact-info div {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .contact-info strong {
     display: block;
     color: var(--dark);
+    margin-bottom: 3px;
+}
+
+.contact-info a:hover {
+    color: var(--blue);
 }
 
 .contact-card {
     background: white;
-    padding: 35px;
-    border-radius: 18px;
-    box-shadow: 0 10px 30px #0000000a;
+    padding: 40px;
+    border-radius: 22px;
+    box-shadow: 0 15px 40px #0000000b;
 }
 
 .contact-card h3 {
-    font-size: 23px;
+    font-size: 25px;
     margin-bottom: 15px;
+    color: var(--dark);
 }
 
 .contact-card .btn {
-    margin-top: 20px;
+    margin-top: 22px;
+    margin-right: 8px;
 }
 
 /* FOOTER */
@@ -319,8 +397,13 @@ nav {
 footer {
     background: #0b172b;
     color: white;
-    padding: 35px 0;
+    padding: 40px 0;
     text-align: center;
+}
+
+footer h2 {
+    font-size: 27px;
+    letter-spacing: 1px;
 }
 
 footer p {
@@ -329,23 +412,23 @@ footer p {
     margin-top: 8px;
 }
 
-/* WHATSAPP SABİT BUTON */
+/* WHATSAPP */
 
 .whatsapp-float {
     position: fixed;
-    width: 62px;
-    height: 62px;
+    width: 64px;
+    height: 64px;
     bottom: 25px;
     right: 25px;
-    background: #25D366;
+    background: var(--green);
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+    box-shadow: 0 5px 20px rgba(0,0,0,.25);
     z-index: 9999;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
 }
 
 .whatsapp-float:hover {
@@ -354,14 +437,14 @@ footer p {
 }
 
 .whatsapp-float svg {
-    width: 35px;
-    height: 35px;
+    width: 36px;
+    height: 36px;
     fill: white;
 }
 
 /* MOBİL UYUMLULUK */
 
-@media(max-width: 850px) {
+@media(max-width:850px) {
 
     .hero-content,
     .about-content,
@@ -370,28 +453,26 @@ footer p {
     }
 
     .hero h1 {
-        font-size: 43px;
+        font-size: 45px;
     }
 
     .service-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .menu {
-        gap: 12px;
-        font-size: 12px;
+        grid-template-columns: repeat(2,1fr);
     }
 
     .cta-content {
         flex-direction: column;
         align-items: flex-start;
     }
+
+    .menu {
+        gap: 15px;
+    }
 }
 
-@media(max-width: 550px) {
+@media(max-width:550px) {
 
     nav {
-        height: auto;
         min-height: 75px;
         flex-wrap: wrap;
         padding: 15px 0;
@@ -401,7 +482,7 @@ footer p {
         width: 100%;
         justify-content: space-between;
         margin-top: 15px;
-        gap: 8px;
+        gap: 5px;
     }
 
     .menu a {
@@ -413,7 +494,7 @@ footer p {
     }
 
     .hero {
-        padding: 60px 0;
+        padding: 65px 0;
     }
 
     .hero h1 {
@@ -422,13 +503,21 @@ footer p {
 
     .hero-image {
         min-height: 230px;
-        font-size: 27px;
+        font-size: 30px;
     }
 
     .section-title h2,
     .about h2,
     .contact h2 {
-        font-size: 30px;
+        font-size: 31px;
+    }
+
+    .about-box {
+        padding: 55px 20px;
+    }
+
+    .contact-card {
+        padding: 25px;
     }
 
     .whatsapp-float {
@@ -443,7 +532,6 @@ footer p {
         height: 31px;
     }
 }
-
 </style>
 </head>
 
@@ -477,9 +565,7 @@ CADDE <span>PC</span>
 <div class="hero-content">
 
 <div>
-<p style="color:#2864e8;font-weight:bold">
-PROFESYONEL TEKNİK SERVİS
-</p>
+<div class="hero-label">PROFESYONEL TEKNİK SERVİS</div>
 
 <h1>
 Teknolojiniz<br>
@@ -497,8 +583,8 @@ profesyonel teknik servis, bakım ve onarım çözümleri.
 </div>
 
 <div class="hero-image">
-CADDE PC<br>
-TEKNİK SERVİS
+CADDE PC
+<small>TEKNİK SERVİS</small>
 </div>
 
 </div>
@@ -521,36 +607,48 @@ TEKNİK SERVİS
 <div class="service-icon">💻</div>
 <h3>Bilgisayar Teknik Servis</h3>
 <p>Masaüstü ve dizüstü bilgisayar arıza tespiti, bakım ve onarım.</p>
+<a href="https://wa.me/905365069353?text=Bilgisayar%20teknik%20servis%20hakkinda%20bilgi%20almak%20istiyorum."
+class="service-btn" target="_blank" rel="noopener">Detaylı Bilgi Al →</a>
 </div>
 
 <div class="service-card">
 <div class="service-icon">🍎</div>
 <h3>Mac Teknik Servis</h3>
 <p>MacBook ve Apple bilgisayarlar için teknik destek ve bakım.</p>
+<a href="https://wa.me/905365069353?text=Mac%20teknik%20servis%20hakkinda%20bilgi%20almak%20istiyorum."
+class="service-btn" target="_blank" rel="noopener">Detaylı Bilgi Al →</a>
 </div>
 
 <div class="service-card">
 <div class="service-icon">⚙️</div>
 <h3>Donanım ve Yazılım</h3>
 <p>Windows kurulumu, format, sürücü ve performans sorunlarının çözümü.</p>
+<a href="https://wa.me/905365069353?text=Donanim%20ve%20yazilim%20hizmetleri%20hakkinda%20bilgi%20almak%20istiyorum."
+class="service-btn" target="_blank" rel="noopener">Detaylı Bilgi Al →</a>
 </div>
 
 <div class="service-card">
 <div class="service-icon">🌐</div>
 <h3>Network Kurulumu</h3>
 <p>İnternet, modem, kablosuz ağ ve işletme network çözümleri.</p>
+<a href="https://wa.me/905365069353?text=Network%20kurulumu%20hakkinda%20bilgi%20almak%20istiyorum."
+class="service-btn" target="_blank" rel="noopener">Detaylı Bilgi Al →</a>
 </div>
 
 <div class="service-card">
 <div class="service-icon">💾</div>
 <h3>Veri Kurtarma</h3>
 <p>Hard disk, SSD ve harici disklerde veri kurtarma desteği.</p>
+<a href="https://wa.me/905365069353?text=Veri%20kurtarma%20hizmeti%20hakkinda%20bilgi%20almak%20istiyorum."
+class="service-btn" target="_blank" rel="noopener">Detaylı Bilgi Al →</a>
 </div>
 
 <div class="service-card">
 <div class="service-icon">🏢</div>
 <h3>Kurumsal Teknik Destek</h3>
 <p>İşletmeler için bilgisayar ve bilişim altyapısı desteği.</p>
+<a href="https://wa.me/905365069353?text=Kurumsal%20teknik%20destek%20hakkinda%20bilgi%20almak%20istiyorum."
+class="service-btn" target="_blank" rel="noopener">Detaylı Bilgi Al →</a>
 </div>
 
 </div>
@@ -584,9 +682,8 @@ güvenilir ve kaliteli çözümler üretmeyi hedefliyoruz.
 </p>
 
 <a href="#iletisim" class="btn">
-Bizimle İletişime Geçin
+Bizimle İletişime Geçin →
 </a>
-
 </div>
 
 </div>
@@ -605,7 +702,7 @@ Bizimle İletişime Geçin
 </div>
 
 <a href="tel:+905365069353" class="btn">
-Hemen Arayın
+Hemen Arayın →
 </a>
 
 </div>
@@ -640,9 +737,7 @@ bilgi almak için bizimle iletişime geçebilirsiniz.
 
 <div>
 <strong>E-posta</strong>
-<a href="mailto:info@caddepc.com">
-info@caddepc.com
-</a>
+<a href="mailto:info@caddepc.com">info@caddepc.com</a>
 </div>
 
 <div>
@@ -665,13 +760,12 @@ Suadiye Mahallesi, Tonozlu Sk. No:20,
 <p>
 Bilgisayarınızla ilgili yaşadığınız sorunları
 bize telefon veya e-posta yoluyla iletebilirsiniz.
+Size yardımcı olmaktan memnuniyet duyarız.
 </p>
 
 <a href="tel:+905365069353" class="btn">
 ☎ Hemen Arayın
 </a>
-
-<br><br>
 
 <a href="mailto:info@caddepc.com" class="btn">
 ✉ E-posta Gönder
@@ -702,13 +796,13 @@ Tüm hakları saklıdır.
 </div>
 </footer>
 
-<!-- SABİT WHATSAPP İKONU -->
+<!-- SABİT WHATSAPP -->
 
 <a href="https://wa.me/905365069353"
-   class="whatsapp-float"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="WhatsApp üzerinden iletişime geç">
+class="whatsapp-float"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="WhatsApp üzerinden iletişime geç">
 
 <svg viewBox="0 0 32 32">
 <path d="M16.01 3C8.84 3 3 8.83 3 16c0 2.3.61 4.55 1.77 6.52L3 29l6.65-1.74A12.94 12.94 0 0 0 16 29c7.17 0 13-5.83 13-13S23.18 3 16.01 3zm0 23.8c-1.99 0-3.94-.54-5.63-1.57l-.4-.24-3.95 1.03 1.05-3.85-.26-.42A10.75 10.75 0 0 1 5.2 16c0-5.96 4.85-10.8 10.81-10.8 2.89 0 5.6 1.13 7.64 3.17A10.73 10.73 0 0 1 26.8 16c0 5.96-4.84 10.8-10.79 10.8zm5.93-8.09c-.32-.16-1.9-.94-2.19-1.04-.29-.11-.51-.16-.72.16-.22.32-.83 1.04-1.02 1.25-.19.21-.38.24-.7.08-.32-.16-1.35-.5-2.58-1.59-.95-.84-1.59-1.88-1.78-2.2-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.56.16-.19.21-.32.32-.54.11-.21.06-.4-.03-.56-.08-.16-.72-1.74-.99-2.38-.26-.62-.53-.54-.72-.55h-.62c-.22 0-.57.08-.86.4-.3.32-1.13 1.1-1.13 2.68s1.16 3.11 1.32 3.32c.16.21 2.28 3.48 5.53 4.88.77.33 1.37.53 1.84.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.39.19-1.53-.08-.14-.29-.22-.61-.38z"/>
